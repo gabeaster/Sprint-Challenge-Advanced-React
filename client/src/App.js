@@ -31,10 +31,13 @@ class App extends React.Component {
       <div className="App">
   
         <NavBar />
-        {this.state.data.map(item => {
-          console.log("item", item);
-          return <DataCard key={item.id} item={ item }/>;
-        })}
+        <div className="dataCardContainer">
+          {this.state.data.map(item => {
+                    console.log("item", item);
+                    return <DataCard key={item.id} item ={ item }/>;
+                  })}
+        </div>
+       
       </div>
     )
   }

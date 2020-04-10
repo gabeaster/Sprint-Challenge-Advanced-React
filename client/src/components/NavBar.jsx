@@ -1,9 +1,21 @@
 import React from 'react';
-
+import { useDarkMode } from "../hooks/useDarkMode";
 const NavBar = () => {
+    const [darkMode, setDarkMode] = useDarkMode();
+    const toggleMode = e => {
+        e.preventDefault();
+        setDarkMode(!darkMode);
+    };
     return (
-        <div>
-            <h1>Sprint Challenge</h1>
+        <div className="navBar">
+            
+            <h1>Gabby's Advanced React Sprint Challenge</h1>
+
+            <button
+            onClick={toggleMode}
+            className={darkMode ? 'toggle toggled' : 'toggle'}>
+                 Toggle Dark Mode 
+            </button>
         </div>
     )
 }
