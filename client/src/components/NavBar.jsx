@@ -1,7 +1,9 @@
 import React from 'react';
 import { useDarkMode } from "../hooks/useDarkMode";
+
 const NavBar = () => {
     const [darkMode, setDarkMode] = useDarkMode();
+
     const toggleMode = e => {
         e.preventDefault();
         setDarkMode(!darkMode);
@@ -12,6 +14,7 @@ const NavBar = () => {
             <h1>Gabby's Advanced React Sprint Challenge</h1>
 
             <button
+            data-testid="darkModeBtn"
             onClick={toggleMode}
             className={darkMode ? 'toggle toggled' : 'toggle'}>
                  Toggle Dark Mode 

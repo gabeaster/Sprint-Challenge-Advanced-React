@@ -6,7 +6,7 @@ console.log("these are props for DataCard", item)
 
 return (
     
-        <div className="dataCard">
+        <div className="dataCard" data-testid="dataCard">
             <h3>{item.item.name}</h3>
             <p>{item.item.country}</p>
             <p>Searches: {item.item.searches}</p>

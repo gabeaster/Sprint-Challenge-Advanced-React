@@ -29,9 +29,8 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-  
-        <NavBar />
-        <div className="dataCardContainer">
+        <NavBar data-testid="navBar"/>
+        <div className="dataCardContainer" data-testid="dataCardContainer">
           {this.state.data.map(item => {
                     console.log("item", item);
                     return <DataCard key={item.id} item ={ item }/>;
